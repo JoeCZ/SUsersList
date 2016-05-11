@@ -155,9 +155,10 @@
 
 - (void)updateInfoForUser:(User *)user {
     if (self.managedObjectContext) {
+        __weak __typeof__(self) weakSelf = self;
         [self.managedObjectContext performBlock:^{
-            [User updateUserInfoWithUser:user inManagedObjectContext:self.managedObjectContext];
-            [self.managedObjectContext save:NULL];
+            [User updateUserInfoWithUser:user inManagedObjectContext:weakSelf.managedObjectContext];
+            [weakSelf.managedObjectContext save:NULL];
         }];
     }
 }

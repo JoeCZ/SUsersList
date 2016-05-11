@@ -47,7 +47,7 @@
     if (self.user.imageData) {
         self.userImageView.image = [UIImage imageWithData:self.user.imageData];
     } else {
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:self.user.imageURL]];
             if (!data) {
                 return;
