@@ -25,7 +25,11 @@
     self.username.text = [NSString stringWithFormat:@"@%@", self.user.name];
     self.userTitle.text = self.user.title;
     self.userRealName.text = self.user.realName;
-    self.userPhone.text = self.user.phone;
+    if (self.user.phone) {
+        self.userPhone.text = [NSString stringWithFormat:@"Phone: %@", self.user.phone];
+    } else {
+        self.userPhone.hidden = YES;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,6 +43,7 @@
 }
 
 - (void)loadImage {
+    self.userImageView.image = [UIImage imageNamed:@"DefaultUserImage"];
     if (self.user.imageData) {
         self.userImageView.image = [UIImage imageWithData:self.user.imageData];
     } else {
