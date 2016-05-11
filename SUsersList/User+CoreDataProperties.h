@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.h
 //  SUsersList
 //
-//  Created by Chuou Zhang on 5/8/16.
+//  Created by Chuou Zhang on 5/10/16.
 //  Copyright © 2016 Chuou Zhang. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *realName;
 @property (nullable, nonatomic, retain) NSString *imageURL;
 @property (nullable, nonatomic, retain) NSData *image;
+@property (nullable, nonatomic, retain) NSString *title;
 
 @end
 

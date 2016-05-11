@@ -11,6 +11,7 @@
 #import "User.h"
 #import "SlackFetcher.h"
 #import "User+Slack.h"
+#import "ProfileViewController.h"
 
 @interface SlackUsersCDTVC () <NSURLSessionDelegate>
 
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     [self startSlackFetch];
 }
 
@@ -42,6 +44,8 @@
                                                                                    cacheName:nil];
 }
 
+#pragma mark - UITableViewDelegate
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"User Cell"];
     
@@ -53,11 +57,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - Slack Fetching
 
 - (void)startSlackFetch {
-    // getTasksWithCompletionHandler: is ASYNCHRONOUS
-    // but that's okay because we're not expecting startslackFetch to do anything synchronously anyway
     [self.slackDownloadSession getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
         // let's see if we're already working on a fetch ...
         if (![downloadTasks count]) {
@@ -116,7 +122,6 @@
 
 #pragma mark - NSURLSessionDownloadDelegate
 
-// required by the protocol
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)localFile {
     // we shouldn't assume we're the only downloading going on ...
     if ([downloadTask.taskDescription isEqualToString:SlackFetch]) {
@@ -136,6 +141,15 @@
     if (error && (session == self.slackDownloadSession)) {
         NSLog(@"slack background download session failed: %@", error.localizedDescription);
 //        [self slackDownloadTaskComplete];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:SlackUserProfileIdentifier]) {
+        ProfileViewController *profileViewController = [segue destinationViewController];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        profileViewController.user = (User *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     }
 }
 

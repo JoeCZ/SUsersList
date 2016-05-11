@@ -20,6 +20,7 @@
 		F626713A1CE2611E00FFB6F1 /* SlackFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671391CE2611E00FFB6F1 /* SlackFetcher.m */; };
 		F626713D1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F626713C1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m */; };
 		F62671411CE2A53A00FFB6F1 /* User+Slack.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671401CE2A53900FFB6F1 /* User+Slack.m */; };
+		F626714A1CE2D92F00FFB6F1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671491CE2D92F00FFB6F1 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		F626713E1CE27C1E00FFB6F1 /* SlackConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackConstants.h; sourceTree = "<group>"; };
 		F626713F1CE2A53900FFB6F1 /* User+Slack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Slack.h"; sourceTree = "<group>"; };
 		F62671401CE2A53900FFB6F1 /* User+Slack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Slack.m"; sourceTree = "<group>"; };
+		F62671481CE2D92F00FFB6F1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		F62671491CE2D92F00FFB6F1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				F62671351CE04F1600FFB6F1 /* CoreDataTableViewController.m */,
 				F626713B1CE26AAF00FFB6F1 /* SlackUsersCDTVC.h */,
 				F626713C1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m */,
+				F62671481CE2D92F00FFB6F1 /* ProfileViewController.h */,
+				F62671491CE2D92F00FFB6F1 /* ProfileViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				F62671411CE2A53A00FFB6F1 /* User+Slack.m in Sources */,
 				F62671311CE04DCB00FFB6F1 /* User+CoreDataProperties.m in Sources */,
 				F62671121CE009CC00FFB6F1 /* SUsersList.xcdatamodeld in Sources */,
+				F626714A1CE2D92F00FFB6F1 /* ProfileViewController.m in Sources */,
 				F62671361CE04F1600FFB6F1 /* CoreDataTableViewController.m in Sources */,
 				F626713D1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m in Sources */,
 				F62671321CE04DCB00FFB6F1 /* User.m in Sources */,

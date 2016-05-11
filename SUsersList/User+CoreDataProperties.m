@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  SUsersList
 //
-//  Created by Chuou Zhang on 5/8/16.
+//  Created by Chuou Zhang on 5/10/16.
 //  Copyright © 2016 Chuou Zhang. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -21,5 +21,6 @@
 @dynamic realName;
 @dynamic imageURL;
 @dynamic image;
+@dynamic title;
 
 @end

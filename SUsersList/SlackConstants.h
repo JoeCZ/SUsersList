@@ -21,6 +21,9 @@
 #define SlackUserFirstName @"profile.first_name"
 #define SlackUserLastName @"profile.last_name"
 #define SlackUserRealName @"profile.real_name"
-#define SlackUserImageURL @"profile.image_32"
+#define SlackUserImageURL @"profile.image_192"
+#define SlackUserTitle @"profile.title"
+
+#define SlackUserProfileIdentifier @"User Profile"
 
 #endif /* SlackConstants_h */

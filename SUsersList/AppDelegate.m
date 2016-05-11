@@ -18,11 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
-                                                             bundle: nil];
-    SlackUsersCDTVC *slackUsersViewController = (SlackUsersCDTVC *)[mainStoryboard
-                                                                instantiateViewControllerWithIdentifier:@"Slack Users Table View"];
-    self.window.rootViewController = slackUsersViewController;
+    UINavigationController *navigationVC = (UINavigationController *) self.window.rootViewController;
+    SlackUsersCDTVC *slackUsersViewController = (SlackUsersCDTVC *)navigationVC.topViewController;
     slackUsersViewController.managedObjectContext = self.managedObjectContext;
     return YES;
 }

@@ -34,6 +34,7 @@
         user.firstName = [userDictionary valueForKeyPath:SlackUserFirstName];
         user.lastName = [userDictionary valueForKeyPath:SlackUserLastName];
         user.realName = [userDictionary valueForKeyPath:SlackUserRealName];
+        user.title = [userDictionary valueForKeyPath:SlackUserTitle];
         user.imageURL = [userDictionary valueForKeyPath:SlackUserImageURL];
     }
     
