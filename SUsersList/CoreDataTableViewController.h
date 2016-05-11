@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
-// Make the fetchedResultsController to refetch the data
 - (void)performFetch;
 
 @end

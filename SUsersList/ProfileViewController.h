@@ -10,8 +10,15 @@
 
 @class User;
 
+@protocol ProfileViewControllerDelegate <NSObject>
+
+- (void)updateInfoForUser:(User *)user;
+
+@end
+
 @interface ProfileViewController : UIViewController
 
+@property (nonatomic, weak) id<ProfileViewControllerDelegate> delegate;
 @property (nonatomic, strong) User *user;
 
 @end

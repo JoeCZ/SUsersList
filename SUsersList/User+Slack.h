@@ -12,6 +12,10 @@
 
 + (User *)userWithInfo:(NSDictionary *)userDictionary inManagedObjectContext:(NSManagedObjectContext *)context;
 
+// Load array of users (fetched via URL) into MOC
 + (void)loadUsersFromArray:(NSArray *)users intoManagedObjectContext:(NSManagedObjectContext *)context;
+
+// Update existing User object
++ (void)updateUserInfoWithUser:(User *)user inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

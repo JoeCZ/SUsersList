@@ -13,7 +13,7 @@
 #import "User+Slack.h"
 #import "ProfileViewController.h"
 
-@interface SlackUsersCDTVC () <NSURLSessionDelegate>
+@interface SlackUsersCDTVC () <NSURLSessionDelegate, ProfileViewControllerDelegate>
 
 @property (nonatomic, strong) NSURLSession *slackDownloadSession;
 
@@ -79,7 +79,6 @@
 }
 
 // the getter for the slackDownloadSession @property
-
 - (NSURLSession *)slackDownloadSession {
     if (!_slackDownloadSession) {
         static dispatch_once_t onceToken;
@@ -123,9 +122,8 @@
 #pragma mark - NSURLSessionDownloadDelegate
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)localFile {
-    // we shouldn't assume we're the only downloading going on ...
     if ([downloadTask.taskDescription isEqualToString:SlackFetch]) {
-        // ... but if this is the slack fetching, then process the returned data
+        // If this is the slack fetching, then process the returned data
         [self loadSlackUsersFromLocalURL:localFile
                                intoContext:self.managedObjectContext
                        andThenExecuteBlock:^{
@@ -139,17 +137,28 @@
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     if (error && (session == self.slackDownloadSession)) {
-        NSLog(@"slack background download session failed: %@", error.localizedDescription);
-//        [self slackDownloadTaskComplete];
+        NSLog(@"slack download session failed: %@", error.localizedDescription);
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:SlackUserProfileIdentifier]) {
         ProfileViewController *profileViewController = [segue destinationViewController];
+        profileViewController.delegate = self;
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         profileViewController.user = (User *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
+}
+
+#pragma mark - ProfileViewControllerDelegate
+
+- (void)updateInfoForUser:(User *)user {
+    if (self.managedObjectContext) {
+        [self.managedObjectContext performBlock:^{
+            [User updateUserInfoWithUser:user inManagedObjectContext:self.managedObjectContext];
+            [self.managedObjectContext save:NULL];
+        }];
     }
 }
 

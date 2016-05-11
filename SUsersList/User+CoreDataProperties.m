@@ -20,7 +20,9 @@
 @dynamic lastName;
 @dynamic realName;
 @dynamic imageURL;
-@dynamic image;
+@dynamic imageData;
 @dynamic title;
+@dynamic email;
+@dynamic phone;
 
 @end

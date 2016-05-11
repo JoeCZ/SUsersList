@@ -36,6 +36,7 @@
         user.realName = [userDictionary valueForKeyPath:SlackUserRealName];
         user.title = [userDictionary valueForKeyPath:SlackUserTitle];
         user.imageURL = [userDictionary valueForKeyPath:SlackUserImageURL];
+        user.phone = [userDictionary valueForKeyPath:SlackUserPhone];
     }
     
     return user;
@@ -44,6 +45,20 @@
 + (void)loadUsersFromArray:(NSArray *)users intoManagedObjectContext:(NSManagedObjectContext *)context {
     for (NSDictionary *user in users) {
         [self userWithInfo:user inManagedObjectContext:context];
+    }
+}
+
++ (void)updateUserInfoWithUser:(User *)user inManagedObjectContext:(NSManagedObjectContext *)context {
+    NSString *userId = user.userId;
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    request.predicate = [NSPredicate predicateWithFormat:@"userId = %@", userId];
+    
+    NSError *error;
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    
+    if ([matches count]) {
+        User *oldUser = [matches firstObject];
+        [oldUser setValue:user.imageData forKey:@"imageData"];
     }
 }
 

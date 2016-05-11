@@ -31,16 +31,16 @@
                             <outlet property="delegate" destination="FkQ-gN-fYB" id="bZ0-b7-S9Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Fv0-E1-aR2"/>
+                    <navigationItem key="navigationItem" title="Users" id="Fv0-E1-aR2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whi-9q-iYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1441" y="364"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Details-->
         <scene sceneID="eBc-u6-NHR">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="3q9-9u-Hun" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" title="Details" id="3q9-9u-Hun" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w5z-hU-rBo"/>
                         <viewControllerLayoutGuide type="bottom" id="Uex-Nj-SCc"/>
@@ -50,28 +50,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzh-iH-Psp">
-                                <rect key="frame" x="20" y="72" width="192" height="192"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="bhv-TM-f2r"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="89" width="72" height="72"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTN-lG-l0g">
-                                <rect key="frame" x="504" y="72" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-Di-msi">
+                                <rect key="frame" x="20" y="190" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-Di-msi">
-                                <rect key="frame" x="542" y="157" width="38" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="b2S-Ub-Yqu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="real name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLN-q9-UaU">
+                                <rect key="frame" x="158" y="89" width="95" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="real name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLN-q9-UaU">
-                                <rect key="frame" x="505" y="243" width="75" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-Ws-h0Y">
+                                <rect key="frame" x="20" y="89" width="72" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTN-lG-l0g">
+                                <rect key="frame" x="158" y="144" width="64" height="17"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzN-Wl-J7K">
+                                <rect key="frame" x="20" y="237" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,23 +82,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k9K-Di-msi" firstAttribute="trailing" secondItem="XLq-94-8aZ" secondAttribute="trailingMargin" id="0xb-Cz-n5g"/>
-                            <constraint firstItem="tTN-lG-l0g" firstAttribute="top" secondItem="nzh-iH-Psp" secondAttribute="top" id="6Bg-oZ-QMC"/>
-                            <constraint firstItem="k9K-Di-msi" firstAttribute="trailing" secondItem="tTN-lG-l0g" secondAttribute="trailing" id="8Jh-ME-0jg"/>
-                            <constraint firstItem="FLN-q9-UaU" firstAttribute="bottom" secondItem="nzh-iH-Psp" secondAttribute="bottom" id="Ar6-og-Es6"/>
-                            <constraint firstItem="FLN-q9-UaU" firstAttribute="top" secondItem="k9K-Di-msi" secondAttribute="bottom" constant="65" id="FHK-lm-1rp"/>
-                            <constraint firstItem="k9K-Di-msi" firstAttribute="centerY" secondItem="nzh-iH-Psp" secondAttribute="centerY" id="Ty8-FS-ZK6"/>
-                            <constraint firstItem="nzh-iH-Psp" firstAttribute="top" secondItem="w5z-hU-rBo" secondAttribute="bottom" constant="8" id="mnR-uD-Pqn"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="nzh-iH-Psp" secondAttribute="leading" id="syE-8p-fGR"/>
-                            <constraint firstItem="k9K-Di-msi" firstAttribute="top" secondItem="tTN-lG-l0g" secondAttribute="bottom" constant="64" id="toM-vg-8Mb"/>
-                            <constraint firstItem="k9K-Di-msi" firstAttribute="trailing" secondItem="FLN-q9-UaU" secondAttribute="trailing" id="vt7-ol-yyZ"/>
+                            <constraint firstItem="OS8-Ws-h0Y" firstAttribute="top" secondItem="w5z-hU-rBo" secondAttribute="bottom" constant="25" id="1tX-cj-5hd"/>
+                            <constraint firstItem="k9K-Di-msi" firstAttribute="top" secondItem="OS8-Ws-h0Y" secondAttribute="bottom" constant="29" id="AhK-1t-dRg"/>
+                            <constraint firstItem="tTN-lG-l0g" firstAttribute="top" secondItem="FLN-q9-UaU" secondAttribute="bottom" constant="31" id="BHs-Pt-n2N"/>
+                            <constraint firstItem="NzN-Wl-J7K" firstAttribute="top" secondItem="k9K-Di-msi" secondAttribute="bottom" constant="26" id="ETY-p1-g4q"/>
+                            <constraint firstItem="nzh-iH-Psp" firstAttribute="leading" secondItem="OS8-Ws-h0Y" secondAttribute="leading" id="LeU-st-DXE"/>
+                            <constraint firstItem="tTN-lG-l0g" firstAttribute="bottom" secondItem="nzh-iH-Psp" secondAttribute="bottom" id="Mca-qC-BD0"/>
+                            <constraint firstItem="tTN-lG-l0g" firstAttribute="leading" secondItem="XLq-94-8aZ" secondAttribute="leading" constant="158" id="NCx-bg-aap"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OS8-Ws-h0Y" secondAttribute="leading" id="NjY-Xy-FNO"/>
+                            <constraint firstItem="nzh-iH-Psp" firstAttribute="top" secondItem="OS8-Ws-h0Y" secondAttribute="top" id="SfL-oo-cdm"/>
+                            <constraint firstItem="tTN-lG-l0g" firstAttribute="bottom" secondItem="OS8-Ws-h0Y" secondAttribute="bottom" id="fdB-oE-kwH"/>
+                            <constraint firstItem="k9K-Di-msi" firstAttribute="leading" secondItem="NzN-Wl-J7K" secondAttribute="leading" id="gwK-ad-cM1"/>
+                            <constraint firstItem="k9K-Di-msi" firstAttribute="leading" secondItem="OS8-Ws-h0Y" secondAttribute="leading" id="lSU-MH-mir"/>
+                            <constraint firstItem="FLN-q9-UaU" firstAttribute="leading" secondItem="OS8-Ws-h0Y" secondAttribute="trailing" constant="66" id="o1g-lC-dd0"/>
+                            <constraint firstItem="nzh-iH-Psp" firstAttribute="trailing" secondItem="OS8-Ws-h0Y" secondAttribute="trailing" id="rTC-pa-y3S"/>
+                            <constraint firstItem="FLN-q9-UaU" firstAttribute="top" secondItem="OS8-Ws-h0Y" secondAttribute="top" id="sc4-Yq-xb5"/>
+                            <constraint firstItem="tTN-lG-l0g" firstAttribute="leading" secondItem="FLN-q9-UaU" secondAttribute="leading" id="sxh-X6-4zj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userImage" destination="nzh-iH-Psp" id="bIh-Qe-mg0"/>
-                        <outlet property="userRealName" destination="FLN-q9-UaU" id="gNj-xV-pVU"/>
-                        <outlet property="userTitle" destination="k9K-Di-msi" id="32w-p3-3Yc"/>
-                        <outlet property="username" destination="tTN-lG-l0g" id="eeD-qt-s8V"/>
+                        <outlet property="userImageView" destination="nzh-iH-Psp" id="eYz-T5-5xs"/>
+                        <outlet property="userPhone" destination="NzN-Wl-J7K" id="4RU-an-VcG"/>
+                        <outlet property="userRealName" destination="FLN-q9-UaU" id="tXk-Wd-hyO"/>
+                        <outlet property="userTitle" destination="k9K-Di-msi" id="YWG-k2-bdB"/>
+                        <outlet property="username" destination="tTN-lG-l0g" id="W1r-dP-BkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkc-LW-reJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
