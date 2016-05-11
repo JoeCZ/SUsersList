@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		F62671061CE009CC00FFB6F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671051CE009CC00FFB6F1 /* main.m */; };
 		F62671091CE009CC00FFB6F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671081CE009CC00FFB6F1 /* AppDelegate.m */; };
-		F626710C1CE009CC00FFB6F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F626710B1CE009CC00FFB6F1 /* ViewController.m */; };
 		F626710F1CE009CC00FFB6F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F626710D1CE009CC00FFB6F1 /* Main.storyboard */; };
 		F62671121CE009CC00FFB6F1 /* SUsersList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F62671101CE009CC00FFB6F1 /* SUsersList.xcdatamodeld */; };
 		F62671141CE009CC00FFB6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62671131CE009CC00FFB6F1 /* Assets.xcassets */; };
 		F62671171CE009CC00FFB6F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62671151CE009CC00FFB6F1 /* LaunchScreen.storyboard */; };
 		F62671221CE009CC00FFB6F1 /* SUsersListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671211CE009CC00FFB6F1 /* SUsersListTests.m */; };
+		F62671311CE04DCB00FFB6F1 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F626712E1CE04DCB00FFB6F1 /* User+CoreDataProperties.m */; };
+		F62671321CE04DCB00FFB6F1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671301CE04DCB00FFB6F1 /* User.m */; };
+		F62671361CE04F1600FFB6F1 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671351CE04F1600FFB6F1 /* CoreDataTableViewController.m */; };
+		F626713A1CE2611E00FFB6F1 /* SlackFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671391CE2611E00FFB6F1 /* SlackFetcher.m */; };
+		F626713D1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F626713C1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m */; };
+		F62671411CE2A53A00FFB6F1 /* User+Slack.m in Sources */ = {isa = PBXBuildFile; fileRef = F62671401CE2A53900FFB6F1 /* User+Slack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +37,6 @@
 		F62671051CE009CC00FFB6F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F62671071CE009CC00FFB6F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F62671081CE009CC00FFB6F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F626710A1CE009CC00FFB6F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F626710B1CE009CC00FFB6F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F626710E1CE009CC00FFB6F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F62671111CE009CC00FFB6F1 /* SUsersList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SUsersList.xcdatamodel; sourceTree = "<group>"; };
 		F62671131CE009CC00FFB6F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +45,19 @@
 		F626711D1CE009CC00FFB6F1 /* SUsersListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUsersListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62671211CE009CC00FFB6F1 /* SUsersListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUsersListTests.m; sourceTree = "<group>"; };
 		F62671231CE009CC00FFB6F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F626712D1CE04DCB00FFB6F1 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F626712E1CE04DCB00FFB6F1 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F626712F1CE04DCB00FFB6F1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F62671301CE04DCB00FFB6F1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F62671341CE04F1600FFB6F1 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		F62671351CE04F1600FFB6F1 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		F62671381CE2611E00FFB6F1 /* SlackFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackFetcher.h; sourceTree = "<group>"; };
+		F62671391CE2611E00FFB6F1 /* SlackFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlackFetcher.m; sourceTree = "<group>"; };
+		F626713B1CE26AAF00FFB6F1 /* SlackUsersCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackUsersCDTVC.h; sourceTree = "<group>"; };
+		F626713C1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlackUsersCDTVC.m; sourceTree = "<group>"; };
+		F626713E1CE27C1E00FFB6F1 /* SlackConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackConstants.h; sourceTree = "<group>"; };
+		F626713F1CE2A53900FFB6F1 /* User+Slack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Slack.h"; sourceTree = "<group>"; };
+		F62671401CE2A53900FFB6F1 /* User+Slack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Slack.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,15 +99,16 @@
 		F62671031CE009CC00FFB6F1 /* SUsersList */ = {
 			isa = PBXGroup;
 			children = (
+				F62671371CE260D800FFB6F1 /* Slack Fetcher */,
+				F62671331CE04E9900FFB6F1 /* Controllers */,
+				F626712C1CE03EF100FFB6F1 /* Core Data Model */,
 				F62671071CE009CC00FFB6F1 /* AppDelegate.h */,
 				F62671081CE009CC00FFB6F1 /* AppDelegate.m */,
-				F626710A1CE009CC00FFB6F1 /* ViewController.h */,
-				F626710B1CE009CC00FFB6F1 /* ViewController.m */,
+				F626713E1CE27C1E00FFB6F1 /* SlackConstants.h */,
 				F626710D1CE009CC00FFB6F1 /* Main.storyboard */,
 				F62671131CE009CC00FFB6F1 /* Assets.xcassets */,
 				F62671151CE009CC00FFB6F1 /* LaunchScreen.storyboard */,
 				F62671181CE009CC00FFB6F1 /* Info.plist */,
-				F62671101CE009CC00FFB6F1 /* SUsersList.xcdatamodeld */,
 				F62671041CE009CC00FFB6F1 /* Supporting Files */,
 			);
 			path = SUsersList;
@@ -112,6 +129,40 @@
 				F62671231CE009CC00FFB6F1 /* Info.plist */,
 			);
 			path = SUsersListTests;
+			sourceTree = "<group>";
+		};
+		F626712C1CE03EF100FFB6F1 /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F626712D1CE04DCB00FFB6F1 /* User+CoreDataProperties.h */,
+				F626712E1CE04DCB00FFB6F1 /* User+CoreDataProperties.m */,
+				F626712F1CE04DCB00FFB6F1 /* User.h */,
+				F62671301CE04DCB00FFB6F1 /* User.m */,
+				F62671101CE009CC00FFB6F1 /* SUsersList.xcdatamodeld */,
+				F626713F1CE2A53900FFB6F1 /* User+Slack.h */,
+				F62671401CE2A53900FFB6F1 /* User+Slack.m */,
+			);
+			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		F62671331CE04E9900FFB6F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F62671341CE04F1600FFB6F1 /* CoreDataTableViewController.h */,
+				F62671351CE04F1600FFB6F1 /* CoreDataTableViewController.m */,
+				F626713B1CE26AAF00FFB6F1 /* SlackUsersCDTVC.h */,
+				F626713C1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F62671371CE260D800FFB6F1 /* Slack Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				F62671381CE2611E00FFB6F1 /* SlackFetcher.h */,
+				F62671391CE2611E00FFB6F1 /* SlackFetcher.m */,
+			);
+			name = "Slack Fetcher";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F626713A1CE2611E00FFB6F1 /* SlackFetcher.m in Sources */,
+				F62671411CE2A53A00FFB6F1 /* User+Slack.m in Sources */,
+				F62671311CE04DCB00FFB6F1 /* User+CoreDataProperties.m in Sources */,
 				F62671121CE009CC00FFB6F1 /* SUsersList.xcdatamodeld in Sources */,
-				F626710C1CE009CC00FFB6F1 /* ViewController.m in Sources */,
+				F62671361CE04F1600FFB6F1 /* CoreDataTableViewController.m in Sources */,
+				F626713D1CE26AAF00FFB6F1 /* SlackUsersCDTVC.m in Sources */,
+				F62671321CE04DCB00FFB6F1 /* User.m in Sources */,
 				F62671091CE009CC00FFB6F1 /* AppDelegate.m in Sources */,
 				F62671061CE009CC00FFB6F1 /* main.m in Sources */,
 			);
